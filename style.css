@@ -1,0 +1,278 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: hsl(234, 29%, 20%);
+}
+
+#parent,
+#main-container {
+    display: flex;
+}
+
+#parent {
+    background-color: hsl(235, 18%, 26%);
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-container {
+    background-color: white;
+    min-height: 100%;
+    width: 100%;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+}
+
+img {
+    width: 100%;
+}
+
+#text-content {
+    margin: 30px;
+    position: relative;
+    height: 100%;
+}
+
+h1 {
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+#intro {
+    margin-top: 25px;
+}
+
+ul {
+    line-height: 25px;
+    margin-top: 25px;
+    margin-bottom: 35px;
+}
+
+li {
+    list-style: none;
+    background-image: url("./images/icon-list.svg");
+    background-repeat: no-repeat;
+    background-position: top 15% left;
+    padding-left: 35px;
+}
+
+.above-input {
+    font-weight: 700;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+#input-label {
+    float: left;
+}
+
+#input-error {
+    color: hsl(4, 100%, 67%);
+    float: right;
+    position: relative;
+    display: none;
+}
+
+input {
+    width: 100%;
+    height: 50px;
+    border-radius: 7px;
+    border: 1px solid hsl(231, 7%, 60%);
+    padding: 20px;
+    
+}
+
+input.error {
+    background-color: rgba(255, 98, 87, 0.2);
+    border: 1px solid hsl(4, 100%, 67%);
+    color: hsl(4, 100%, 67%);
+}
+
+input:focus {
+    outline: none;
+    border-width: 2px;
+}
+
+input:hover {
+    cursor: pointer;
+}
+
+button {
+    margin-top: 20px;
+    border-radius: 7px;
+    height: 50px;
+    width: 100%;
+    border: none;
+    color: white;
+    background-color: hsl(234, 29%, 20%);
+    font-weight: 700;
+}
+
+button:hover {
+    cursor: pointer;
+    background-image: linear-gradient(to right, #fe5378, hsl(4, 100%, 67%));
+    box-shadow: 0 12px 15px 1px linear-gradient(to right, #fe5378, hsl(4, 100%, 67%));
+}
+
+#subscribe {
+    position: absolute;
+    left: 0;
+    bottom: -65px;
+    z-index: 1;
+}
+
+.display-on-hover {
+    position: absolute;
+    background-image: linear-gradient(to right, #fe5378, hsl(4, 100%, 67%));
+    height: 50px;
+    width: 100%;
+    border-radius: 7px;
+    filter: blur(20px);
+    opacity: 0.8;
+    display: none;
+}
+
+#sign-up {
+    z-index: 0;
+    bottom: -80px;
+
+}
+
+/* gradient shadow appears when button is hovered over */
+button#subscribe:hover + #sign-up {
+    display: block;
+}
+
+/* everything to do with the success message */
+
+#success-container {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    padding: 20px;
+    flex-direction: column;
+    position: relative;
+}
+
+strong {
+    font-weight: 700;
+}
+
+#success {
+    margin-bottom: 25px;
+    margin-top: 35px;
+}
+
+#success-icon {
+    width: 70px;
+    height: 70px;
+    margin-top: 40%;
+}
+
+#dismiss-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#dismiss {
+    position: absolute;
+    bottom: 5%;
+    z-index: 1;
+}
+
+#dismiss-message {
+    z-index: 0;
+    bottom: 1%;
+}
+
+button#dismiss:hover + #dismiss-message {
+    display: block;
+}
+
+
+@media (min-width: 850px) {
+
+    #main-container {
+        flex-direction: row;
+        border-radius: 30px;
+        padding: 25px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        min-height: 550px;
+        max-width: 850px;
+        margin: 30px;
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
+    }
+
+    #text-content {
+        display: flex;
+        flex-direction: column;
+        padding: 7px;
+        margin: 0px;
+        margin-right: 40px;
+        margin-left: 20px;
+        margin-top: 50px;
+        flex-grow: 0;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    ul {
+        line-height: 35px;
+    }
+
+    li {
+        background-position: top 50% left;
+    }
+
+    #subscribe {
+        bottom: -17%;
+        left: 1.5%;
+        width: 97.5%;
+    }
+
+    #sign-up {
+        bottom: -21%;
+    }
+
+    #success-container {
+        max-width: 460px;
+        height: 475px;
+        padding: 50px;
+        border-radius: 35px;
+    }
+
+    #success-icon {
+        margin: 0px;
+        width: 60px;
+        height: 60px;
+    }
+
+    #success {
+        line-height: 50px;
+        margin-top: 25px;
+    }
+    
+    #success-container p {
+        line-height: 22px;
+    }
+
+    #dismiss-message {
+        bottom: -7.5%;
+    }
+    
+}
