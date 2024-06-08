@@ -79,7 +79,7 @@ For reference, I set both the button and button shadow positioning to `absolute`
 ### Useful resources
 
 - [W3schools](https://www.w3schools.com/css/) - Helped me with styling certain elements
-- [MDN web docs](https://developer.mozilla.org/en-US/) - Helped me a lot with the fetch API and a great general reference
+- [MDN web docs](https://developer.mozilla.org/en-US/) - a great general reference
 
 ## Author
 
